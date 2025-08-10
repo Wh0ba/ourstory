@@ -2,20 +2,21 @@ import EmojiCard from "./components/EmojiCard";
 import FallingHeartsBackdrop from "./components/FallingHeartsBackdrop";
 
 const cards = [
-	{ title: "ضحكاتنا", emoji: "😊" },
-	{ title: "شوقنا", emoji: "💞" },
-	{ title: "حبنا", emoji: "❤️" },
-	{ title: "جمالنا", emoji: "⭐" },
+	{ title: "سر سعادتي", emoji: "😊" },
+	{ title: "أميرتي", emoji: "💞" },
+	{ title: "حبيبتي", emoji: "❤️" },
+	{ title: "فراشتي الحلوة", emoji: "🦋" },
 	{
-		title: `${Math.max(
+		title: `صار ${Math.max(
 			0,
 			Math.floor(
 				(Date.now() - new Date("2025-05-02").getTime()) /
 					(1000 * 60 * 60 * 24)
 			)
-		)} يومًا معًا`,
-		emoji: "📅",
+		)} يوم سوى`,
+		emoji: "💍",
 	},
+	{ title: "كم يوم للعرس : ماندريي", emoji: "🎉" },
 ];
 
 function CardList() {
@@ -44,16 +45,15 @@ function App() {
 						emoji='💌'
 						floatIndex={0}
 					/>
+					<EmojiCard
+						title='عبدالوهاب و طيبة'
+						emoji='💍♾️🩷'
+						floatIndex={cards.length}
+						className='mt-4 sm:mt-6'
+					/>
 				</div>
 				<hr className='my-6 sm:my-8 w-3/4 sm:w-1/2 border-t-2 rounded-2xl h-1 text-white' />
 				<CardList />
-				<hr className='my-6 sm:my-8 w-3/4 sm:w-1/2 border-t-2 rounded-2xl h-1 text-white' />
-				<EmojiCard
-					title='عبدالوهاب & طيبة'
-					emoji='💍♾️🩷'
-					floatIndex={cards.length}
-					className='mt-4 sm:mt-6'
-				/>
 			</div>
 		</>
 	);

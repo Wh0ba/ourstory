@@ -21,7 +21,7 @@ export default function EmojiCard({ title, emoji, floatIndex, className }) {
 	return (
 		<div
 			ref={cardRef}
-			className={`backdrop-blur-lg bg-white/20 rounded-2xl shadow-lg border border-white/20 p-4 sm:p-6 min-w-[100px] sm:min-w-[120px] min-h-[100px] sm:min-h-[120px] flex flex-col items-center justify-center m-2 sm:m-4 font-medium text-sm sm:text-lg transition-transform ${
+			className={`backdrop-blur-sm bg-white/13 rounded-2xl shadow-lg border border-white/20 p-4 sm:p-6 min-w-[100px] sm:min-w-[120px] min-h-[100px] sm:min-h-[120px] flex flex-col items-center justify-center m-2 sm:m-4 font-medium text-sm sm:text-lg transition-transform ${
 				className || ""
 			}`}>
 			<span className='text-2xl sm:text-4xl'>{emoji}</span>
