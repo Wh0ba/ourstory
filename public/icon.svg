@@ -1,0 +1,70 @@
+<svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for liquid glass effect -->
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF4C6A;stop-opacity:0.9" />
+      <stop offset="30%" style="stop-color:#DC143C;stop-opacity:0.95" />
+      <stop offset="70%" style="stop-color:#B91C3C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B0000;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- Glass highlight gradient -->
+    <linearGradient id="highlight" x1="0%" y1="0%" x2="60%" y2="60%">
+      <stop offset="0%" style="stop-color:white;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:white;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:white;stop-opacity:0" />
+    </linearGradient>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#8B0000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Smooth heart shape -->
+  <path d="M100 165 
+           C 55 120, 15 85, 15 55 
+           C 15 35, 25 20, 45 20 
+           C 65 20, 85 35, 100 50 
+           C 115 35, 135 20, 155 20 
+           C 175 20, 185 35, 185 55 
+           C 185 85, 145 120, 100 165 Z" 
+        fill="url(#heartGradient)" 
+        filter="url(#dropShadow)"/>
+        
+  <!-- Glass highlight overlay -->
+  <path d="M100 165 
+           C 55 120, 15 85, 15 55 
+           C 15 35, 25 20, 45 20 
+           C 65 20, 85 35, 100 50 
+           C 115 35, 135 20, 155 20 
+           C 175 20, 185 35, 185 55 
+           C 185 85, 145 120, 100 165 Z" 
+        fill="url(#highlight)"/>
+        
+  <!-- Glossy shine effect -->
+  <ellipse cx="70" cy="45" rx="25" ry="15" 
+           fill="white" 
+           opacity="0.4" 
+           transform="rotate(-20 70 45)"/>
+  
+  <!-- Letter A with glass effect -->
+  <text x="75" y="95" 
+        font-family="serif" 
+        font-size="38" 
+        font-weight="bold" 
+        fill="white" 
+        text-anchor="middle" 
+        dominant-baseline="middle"
+        style="text-shadow: 0 2px 4px rgba(0,0,0,0.3); filter: drop-shadow(0 1px 2px rgba(255,255,255,0.3));">A</text>
+  
+  <!-- Letter T with glass effect -->
+  <text x="125" y="95" 
+        font-family="serif" 
+        font-size="38" 
+        font-weight="bold" 
+        fill="white" 
+        text-anchor="middle" 
+        dominant-baseline="middle"
+        style="text-shadow: 0 2px 4px rgba(0,0,0,0.3); filter: drop-shadow(0 1px 2px rgba(255,255,255,0.3));">T</text>
+</svg>

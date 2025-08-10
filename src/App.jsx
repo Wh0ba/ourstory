@@ -1,5 +1,6 @@
 import EmojiCard from "./components/EmojiCard";
 import FallingHeartsBackdrop from "./components/FallingHeartsBackdrop";
+import FloatingWords from "./components/FloatingWords";
 
 const cards = [
 	{ title: "سر سعادتي", emoji: "😊" },
@@ -38,6 +39,18 @@ function App() {
 	return (
 		<>
 			<FallingHeartsBackdrop />
+			<FloatingWords
+				floatingWords={[
+					"طبطبي",
+					"طبيبتي",
+					"طبوشي",
+					"طيوبتي",
+					"نور عيوني",
+					"قمري",
+					"حياتي",
+					"أميرة قلبي",
+				]}
+			/>
 			<div className='flex flex-col items-center justify-center min-h-screen px-4 py-8 text-black'>
 				<div className='w-full max-w-xs sm:max-w-sm md:w-1/4 '>
 					<EmojiCard
@@ -45,9 +58,10 @@ function App() {
 						emoji='💌'
 						floatIndex={0}
 					/>
+
 					<EmojiCard
 						title='عبدالوهاب و طيبة'
-						emoji='💍♾️🩷'
+						emoji='💍🩷'
 						floatIndex={cards.length}
 						className='mt-4 sm:mt-6'
 					/>
