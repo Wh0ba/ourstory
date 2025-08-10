@@ -66,7 +66,6 @@ function App() {
 						className='mt-4 sm:mt-6'
 					/>
 				</div>
-				<hr className='my-6 sm:my-8 w-3/4 sm:w-1/2 border-t-2 rounded-2xl h-1 text-white' />
 				<CardList />
 			</div>
 		</>
