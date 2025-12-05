@@ -17,7 +17,12 @@ const cards = [
 		)} يوم سوى`,
 		emoji: "💍",
 	},
-	{ title: "كم يوم للعرس : ماندريي", emoji: "🎉" },
+	{ title: `صار ${Math.max(
+			0,
+			Math.floor((new Date("2025-12-25").getTime() - Date.now()) /
+					(1000 * 60 * 60 * 24)
+			)
+		)} يوم للعرس `, emoji: "🎉" },
 ];
 
 function CardList() {
