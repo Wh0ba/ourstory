@@ -17,9 +17,9 @@ const cards = [
 		)} يوم سوى`,
 		emoji: "💍",
 	},
-	{ title: `صار ${Math.max(
+	{ title: `بعد ${Math.max(
 			0,
-			Math.floor((new Date("2025-12-25").getTime() - Date.now()) /
+			Math.floor((new Date("2025-12-26").getTime() - Date.now()) /
 					(1000 * 60 * 60 * 24)
 			)
 		)} يوم للعرس `, emoji: "🎉" },
