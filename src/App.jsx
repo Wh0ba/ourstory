@@ -16,7 +16,7 @@ const getWeddingCountdown = () => {
 		);
 
 		const hourLabel = hours > 2 && hours < 11 ? "ساعات" : "ساعة";
-		return `بعد ${days} يوم و ${hours} ${hourLabel} 💍للعرس`;
+		return `بعد ${days} يوم و ${hours} ${hourLabel} للعرس💘`;
 	} else {
 		// Wedding has passed
 		const absDiff = Math.abs(timeDiff);
