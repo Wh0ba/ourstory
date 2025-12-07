@@ -2,6 +2,31 @@ import EmojiCard from "./components/EmojiCard";
 import FallingHeartsBackdrop from "./components/FallingHeartsBackdrop";
 import FloatingWords from "./components/FloatingWords";
 
+
+const getWeddingCountdown = () => {
+	const weddingDate = new Date("2025-12-25T16:00:00+03:00");
+	const now = Date.now();
+	const timeDiff = weddingDate.getTime() - now;
+
+	if (timeDiff > 0) {
+		// Wedding hasn't happened yet
+		const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+		const hours = Math.floor(
+			(timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+		);
+		return `بعد ${days} يوم و ${hours} ساعة للعرس`;
+	} else {
+		// Wedding has passed
+		const absDiff = Math.abs(timeDiff);
+		const days = Math.floor(absDiff / (1000 * 60 * 60 * 24));
+		const hours = Math.floor(
+			(absDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+		);
+		return `صار ${days} يوم و ${hours} ساعة من العرس 💕`;
+	}
+};
+
+
 const cards = [
 	{ title: "سر سعادتي", emoji: "😊" },
 	{ title: "أميرتي", emoji: "💞" },
@@ -17,12 +42,7 @@ const cards = [
 		)} يوم سوى`,
 		emoji: "💍",
 	},
-	{ title: `بعد ${Math.max(
-			0,
-			Math.floor((new Date("2025-12-25").getTime() - Date.now()) /
-					(1000 * 60 * 60 * 24)
-			)
-		)} يوم للعرس `, emoji: "🎉" },
+	{ title: getWeddingCountdown(), emoji: "🎉" },
 ];
 
 function CardList() {
