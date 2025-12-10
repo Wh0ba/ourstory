@@ -1,10 +1,12 @@
-/* @font-face {
+@font-face {
 	font-family: "Amiri";
-	src: url("assets/Amiri-Regular.tff") format("truetype");
+	src: url("assets/Amiri-Regular.tff") format("truetype"),
+		url('Amiri-Regular.woff2') format('woff2'),
+        url('Amiri-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
-} */
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+	font-display: swap;
+}
 
 #root {
 	max-width: 1280px;
